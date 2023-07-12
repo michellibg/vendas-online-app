@@ -9,7 +9,11 @@ const App = () => {
       <SafeAreaView>
         <Example text="ABC">Children1</Example>
         <Example text="José" />
-        <Text>Titulo teste</Text>
+        <Example text="Michelli" />
+        <Example />
+        <Example />
+        <Example />
+        <Example />
       </SafeAreaView>
     </View>
   );

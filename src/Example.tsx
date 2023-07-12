@@ -1,4 +1,5 @@
-import {Text, View} from 'react-native';
+import { useState } from 'react';
+import {Text, View, Button} from 'react-native';
 
 interface ExampleProps {
   text?: string;
@@ -12,10 +13,19 @@ interface ExampleProps {
 //   const { children, text : textProps } = props;
 
 const Example = ({children, text}: ExampleProps) => {
+
+  const [newText, setNewText] = useState('');
+
+  const handleOnPress = () => {
+    setNewText('Mudou');
+  }
+
   return (
     <View>
       <Text style={{color: 'pink'}}>{children}</Text>
-      <Text style={{color: 'blue'}}>{text}</Text>
+      <Text style={{color: 'blue'}}>{newText || text}</Text>
+
+      <Button onPress={handleOnPress} title = "Botão"/> 
     </View>
   );
 };
