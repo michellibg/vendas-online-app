@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {Text, View, Button} from 'react-native';
 
 interface ExampleProps {
@@ -15,6 +15,10 @@ interface ExampleProps {
 const Example = ({children, text}: ExampleProps) => {
 
   const [newText, setNewText] = useState('');
+
+  useEffect(() =>{
+    console.log('passou aqui 3');
+  },[newText])
 
   const handleOnPress = () => {
     setNewText('Mudou');

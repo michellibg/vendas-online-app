@@ -8,12 +8,6 @@ const App = () => {
     <View>
       <SafeAreaView>
         <Example text="ABC">Children1</Example>
-        <Example text="José" />
-        <Example text="Michelli" />
-        <Example />
-        <Example />
-        <Example />
-        <Example />
       </SafeAreaView>
     </View>
   );
