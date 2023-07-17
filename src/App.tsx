@@ -1,16 +1,19 @@
-import {SafeAreaView, StyleSheet, Text, View, Button} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View, Button, useAnimatedValue} from 'react-native';
 
 import styled from 'styled-components/native';
 import Example from './Example';
 import ExemploUseMemo from './exemplo-useMemo';
 import { useState } from 'react';
+import { useApp } from './useApp';
 
 const App = () => {
-  const [value, setValue] = useState();
+  const { handleOnPress, value}  = useApp();
+
   return (
     <View>
       <SafeAreaView>
-        <text>teste</text>
+        <Text>{value}</Text>
+        <Button title="mude" onPress={handleOnPress}/>
       </SafeAreaView>
     </View>
   );
